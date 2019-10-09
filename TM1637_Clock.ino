@@ -54,6 +54,7 @@
 // Bitmask for colon in time
 #define COLON 0x40
 // For the 12/24 hour mode
+// Pull MODEPIN high to show military time
 #define MODEPIN 5
 #define HR12 0
 #define HR24 1
