@@ -1,0 +1,29 @@
+
+int flag = 3
+while(1) {
+
+    s = second();
+	
+	if ((s >= 20) && (s <= 25) {
+	    temperature();
+	}
+	if ((s >=40 ) && (s <= 45)) {
+	    switch flag {
+		case 1:
+		    day();
+			case--;
+			break;
+		case 2:
+		    month();
+			case--;
+			break;
+		case 3:
+		    year();
+			case--;
+			break;
+		case 0:
+            flag = 3;
+            break;
+        }    // switch
+	}        // if (s ...)
+}            // while...

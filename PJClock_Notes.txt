@@ -1,0 +1,34 @@
+- assume rtc is set to UTC
+- on power-up (in setup())
+-    see if signature bytes in nvram
+-    yes, get standard time offset (-5 for EST) from nvram
+-         get DST offset (-4 for EST) from nvram
+-    no, go into timeset mode (get time, local standard timeand DST offset
+-    see if rtc is running
+-    yes, good to go
+-    no,  go into timeset mode (get time, local standard timeand DST offset
+-    good to go
+-        - initialize the display
+-        - setup time to sync with rtc (adjust for TZ and DST)
+-        - setup periodic interrupt from rtc (once per second is probably enough)
+
+
+- main loop
+-    adjust display brightness
+-    show the time
+-    sleep() (until next interrupt)
+
+- interrupt (once per second)
+-    get the time in UTC
+-    convert to local time based on TZ (using DST flag)
+-    is it time to spring ahead?
+-    yes, spring ahead
+-    is it time to fall back?
+-    yes, fall back
+
+- spring ahead
+-    offset used is DST offset
+
+- fall back
+-    offset used is LST (Local Standard Time)
+

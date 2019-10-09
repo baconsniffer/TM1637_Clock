@@ -1,0 +1,7 @@
+# Editor backup files
+*.*~
+
+# Compiled object files
+*.o
+*.obj
+
